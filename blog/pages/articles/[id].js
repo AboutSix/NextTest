@@ -10,8 +10,8 @@ export default function Article({ article }) {
 
   return (
     <div className="max-w-4xl mx-auto py-8">
-      <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
-      <p className="text-gray-600 mb-4">{new Date(article.publishedAt).toLocaleDateString()}</p>
+      <h1 className="text-4xl text-center font-bold mb-4">{article.title}</h1>
+      <p className="text-gray-600 text-right mb-4">{new Date(article.publishedAt).toLocaleDateString()}</p>
       <div className="prose" dangerouslySetInnerHTML={{ __html: article.content }}></div>
     </div>
   );
