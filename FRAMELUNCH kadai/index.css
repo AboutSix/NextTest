@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
+ul,ol,li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+body{font-size: 100%; font-family: YuGothic, sans-serif;}
+
+/* PC */
+.pcOnly{
+    display: block;
+}
+.spOnly{
+    display: none;
+}
+body{
+    min-width: 1160px;
+}
+.inner{
+    width: 1160px;
+    min-width: 1160px;
+    margin: 0 auto;
+}
+img{
+    max-width: 1160px;
+    vertical-align: top;
+}
+.flex{
+    display: flex;
+}
+.flex2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    position: relative;
+    margin: 50px 0 50px 45px;
+    color: #00386a;
+}
+h2::before{
+    content: '';
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 4px;
+    background-color: #ff6556;
+}
+
+/* header */
+header .top{
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+header .top p{
+    font-size: 18px;
+    color: #00386a;
+}
+header .top p span{
+    font-weight: bold;
+}
+
+/* mv */
+.mv{
+    width: 100%;
+    margin: 0 auto;
+}
+h1{
+    position: relative;
+    text-align: center;
+}
+h1 > img{
+    width: 100%;
+    max-width: inherit;
+    min-width: auto;
+}
+h1 p{
+    position: absolute;
+    width: 15%;
+    right: 32%;
+    bottom: -3%;
+}
+h1 p > img{
+    width: 100%;
+}
+
+/* newsTwitter */
+.newsTwitter .left{
+    width: 820px;
+    margin-right: 45px;
+}
+.newsTwitter .left .btn{
+    position: relative;
+    display: block;
+    width: 320px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+    border-radius: 35px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center;
+    text-indent: -10px;
+    background-color: #d6ceba;
+}
+.newsTwitter .left .btn::after{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15px;
+}
+.newsTwitter .left .btn:hover{
+    opacity: 0.8;
+}
+.newsTwitter .right{
+    width: 295px;
+}
+.newsTwitter .right p img{
+    width: 100%;
+}
+
+#news > a{
+    display: block;
+    margin-right: 10px;
+}
+#news > a:nth-child(3n){
+    margin-right: 0;
+}
+#news > a img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+#news > a p{
+    margin-bottom: 20px;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* schedule */
+.schedule ul li > p{
+    position: relative;
+    display: flex;
+    margin: 23px 0;
+    color: #a3a3a3;
+    font-size: 14px;
+    text-indent: 45px;
+}
+.schedule ul li > p::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 2px;
+    background-color: #e2e2e2;
+}
+.schedule ul li > p::after{
+    content: '';
+    position: absolute;
+    left: 138px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 140px);
+    height: 2px;
+    background-color: #e2e2e2;
+}
+.schedule ul li > p .new{
+    display: block;
+    width: 60px;
+    height: 24px;
+    margin-left: 40px;
+    text-indent: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ff6556;
+    z-index: 1;
+}
+.schedule ul li > a{
+    display: block;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e2e2e2;
+    font-size: 21px;
+    text-decoration: underline;
+}
+.schedule ul li > a span{
+    color: #ff6556;
+    text-decoration: underline;
+}
+
+/* pastSchedule */
+.pastSchedule{
+    margin-bottom: 90px;
+}
+.pastSchedule ul li{
+    margin-bottom: 40px;
+    padding: 20px 30px;
+    background-color: #f3f2ec;
+}
+.pastSchedule ul li:last-child{
+    margin-bottom: 0;
+}
+.pastSchedule ul li > p{
+    margin-bottom: 12px;
+    color: #a3a3a3;
+    font-size: 14px;
+}
+.pastSchedule ul li > a{
+    display: block;
+    font-size: 21px;
+    text-decoration: underline;
+}
+.pastSchedule ul li > a span{
+    color: #ff6556;
+    text-decoration: underline;
+}
+
+/* music */
+.music{
+    margin-bottom: 50px;
+}
+.music .musicBox{
+    align-items: center;
+    height: 440px;
+}
+.music .musicBox p{
+    width: 50%;
+}
+.music .musicBox p:nth-child(2){
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 60px;
+    background: #fdf5f4;
+}
+.music .musicBox p img{
+    width: 100%;
+}
+.music .musicBox p:nth-child(1) img{
+    height: 440px;
+    object-fit: cover;
+}
+
+/* member */
+.member{
+    padding: 70px 0;
+    background-color: #fdf5f4;
+}
+.member h2{
+    margin-top: 0;
+}
+.member ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.member ul li{
+    width: 530px;
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+.member ul li:nth-child(2n){
+    margin-right: 0;
+}
+.member ul li img{
+    width: 100%;
+}
+
+/* contact */
+.contact{
+    margin-bottom: 110px;
+}
+.contact h2 span{
+    font-size: 14px;
+    color: #000;
+    margin-left: 20px;
+}
+.contact .text{
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.contact form > div label{
+    font-size: 21px;
+}
+.contact form > div label span{
+    color: #ff6556;
+}
+.contact form > div input,
+.contact form > div select,
+.contact form > div textarea{
+    padding: 10px;
+    background: #f3f2ec;
+    border-radius: 5px;
+}
+.contact form > div ul{
+    margin-bottom: 30px;
+}
+.contact form > div ul li:first-child{
+    margin-bottom: 5px;
+}
+.contact form > div input,
+.contact form > div select{
+    width: 360px;
+}
+.contact form > div ul li textarea{
+    width: 900px;
+    height: 230px;
+}
+.contact form .submit button{
+    position: relative;
+    display: block;
+    width: 440px;
+    height: 70px;
+    line-height: 70px;
+    margin-top: 60px;
+    border-radius: 35px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center;
+    text-indent: -10px;
+    background-color: #d6ceba;
+    border: none;
+    cursor: pointer;
+}
+.contact form .submit button::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11.2px;
+    height: 18.4px;
+    margin-left: 15px;
+    background: url('./oka-assets/btn_arrow.png') center/cover no-repeat;
+}
+.contact form .submit button:hover{
+    opacity: 0.8;
+}
+.contact form .submit button span{
+    margin-right: 110px;
+}
+
+/* footer */
+.footer{
+    padding: 70px 0 40px;
+    background-color: #d7d4c1;
+}
+.footer p:nth-child(1){
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.footer p:nth-child(2){
+    padding: 40px 0;
+    cursor: pointer;
+}
+.footer p:nth-child(2):hover img {
+    content: url('./oka-assets/bar_banner_on_pc.jpg');
+}
+.footer p:nth-child(3){
+    font-size: 12px;
+    color: #00275b;
+}
+
+/* SP */
+@media only screen and (max-width: 768px) {
+    html, body{overflow-x: hidden;}
+    body{min-width: auto;}
+    .pcOnly{
+        display: none;
+    }
+    .spOnly{
+        display: block;
+    }
+    .inner{
+        width: 100%;
+        min-width: auto;
+        margin: 0;
+        padding: 0 20px;
+    }
+    img{
+        width: 100%;
+        max-width: 100%;
+        vertical-align: top;
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h2{
+        margin: 40px 0 40px 45px;
+        font-size: 24px;
+    }
+
+    /**/
+    header .top p{
+        font-size: 14px;
+    }
+
+    h1 > img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .newsTwitter .left{
+        width: 100%;
+        margin-right: 0;
+    }
+    .newsTwitter .right{
+        width: 100%;
+    }
+    #news > a{
+        width: 48%;
+        margin-right: 4%;
+    }
+    #news > a:nth-child(2n){
+        margin-right: 0;
+    }
+    #news > a img{
+        height: auto;
+    }
+
+    .schedule ul li > a{
+        font-size: 18px;
+    }
+
+    .pastSchedule{
+        margin-bottom: 40px;
+    }
+    .pastSchedule ul li > a{
+        font-size: 18px;
+    }
+
+    .music .musicBox{
+        height: auto;
+    }
+    .music .musicBox p{
+        width: 100%;
+    }
+    .music .musicBox p:nth-child(1) img{
+        height: auto;
+    }
+    .music .musicBox p:nth-child(2){
+        height: auto;
+        padding: 40px;
+    }
+
+    .member{
+        padding: 50px 0;
+    }
+    .member ul li{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .contact .text.spOnly{
+        margin-top: -30px;
+    }
+    .contact form > div label{
+        font-size: 18px;
+    }
+    .contact form > div ul li textarea{
+        width: 100%;
+    }
+    .contact form > div input,
+    .contact form > div select{
+        width: 60%;
+        min-width: 200px;
+    }
+    .contact form .submit button{
+        width: 100%;
+    }
+
+    .footer{
+        padding: 50px 0 30px;
+    }
+    .footer p:nth-child(1){
+        text-align: center;
+        line-height: 2;
+    }
+    .footer p:nth-child(2){
+        padding: 30px 0;
+    }
+    .footer p:nth-child(2):hover img {
+        content: url('./oka-assets/bar_banner_sp.jpg');
+    }
+}
