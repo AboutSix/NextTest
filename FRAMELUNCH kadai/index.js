@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // api
     const apiEndpoint = 'https://2r2t6f8ohx.microcms.io/api/v1/blogs';
     const apiKey = 'DWIYGBhtttLHaxgOikw2Y15tAoBJ4wpSeZQU';
 
@@ -30,5 +31,52 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(error => {
         console.error('Error fetching news:', error);
+    });
+
+    // nav
+    var menuToggle = document.getElementById('menu-toggle');
+    var nav = document.querySelector('.nav');
+    var img = menuToggle.querySelector('img');
+    var body = document.body;
+
+    menuToggle.addEventListener('click', function() {
+        if (nav.classList.contains('show')) {
+            img.src = './assets/menu.png';
+            nav.classList.remove('show');
+            body.classList.remove('no-scroll');
+            setTimeout(function() {
+                nav.style.display = 'none';
+            }, 500);
+        } else {
+            img.src = './assets/close.png';
+            nav.style.display = 'block';
+            body.classList.add('no-scroll');
+            setTimeout(function() {
+                nav.classList.add('show');
+            }, 10);
+        }
+    });
+
+    var navLinks = document.querySelectorAll('.nav a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            var targetId = link.getAttribute('data-target');
+            var targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                event.preventDefault();
+
+                img.src = './assets/menu.png';
+                nav.classList.remove('show');
+                body.classList.remove('no-scroll');
+                setTimeout(function() {
+                    nav.style.display = 'none';
+                }, 500);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
