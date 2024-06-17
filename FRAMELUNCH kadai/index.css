@@ -5,7 +5,7 @@ ul,ol,li{list-style: none;}
 a{color: inherit; text-decoration: none;}
 body{font-size: 100%; font-family: YuGothic, sans-serif;}
 
-body.no-scroll {
+body.no-scroll{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -92,6 +92,14 @@ header .top > a img{
 .nav.show{
     display: block;
     opacity: 1;
+}
+@media only screen and (max-width: 1200px) {
+    .header .top.navshow{
+        max-width: 100vw;
+    }
+    .nav.show{
+        max-width: 100vw;
+    }
 }
 .nav ul{
     height: 100%;

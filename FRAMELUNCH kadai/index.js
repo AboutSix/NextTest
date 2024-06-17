@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // nav
     var menuToggle = document.getElementById('menu-toggle');
+    var header = document.querySelector('.header .top')
     var nav = document.querySelector('.nav');
     var img = menuToggle.querySelector('img');
     var body = document.body;
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             img.src = './assets/menu.png';
             nav.classList.remove('show');
             body.classList.remove('no-scroll');
+            header.classList.remove('navshow');
             setTimeout(function() {
                 nav.style.display = 'none';
             }, 500);
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             img.src = './assets/close.png';
             nav.style.display = 'block';
             body.classList.add('no-scroll');
+            header.classList.add('navshow');
             setTimeout(function() {
                 nav.classList.add('show');
             }, 10);
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.src = './assets/menu.png';
                 nav.classList.remove('show');
                 body.classList.remove('no-scroll');
+                header.classList.remove('navshow');
                 setTimeout(function() {
                     nav.style.display = 'none';
                 }, 500);
